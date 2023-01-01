@@ -1,0 +1,25 @@
+{
+  "name": "ant",
+  "version": "0.0.0",
+  "main": "index.jsx",
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup ./index.jsx --format esm,cjs --external react",
+    "dev": "tsup ./index.jsx --format esm,cjs --watch --external react",
+    "lint": "TIMING=1 eslint *.js* --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "react": "^18.2.0",
+    "tsconfig": "workspace:*",
+    "tsup": "^6.5.0",
+    "typescript": "^4.5.2"
+  }
+}
